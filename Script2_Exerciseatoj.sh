@@ -5,12 +5,6 @@ nano wolves.sh
 # Bárbara Cruz Salazar
 
 ## Enter in the cluster with user and password
-## As I observed that the file downloaded by wget did not contain information even though I checked the notes and data link
-## the link. Therefore, I made a container, where the data was downloaded.
-docker run -u 1600 --rm -v /home/cirio/bcruz/BioinfinvRepro/Unidad5/ProyectoUni5/data:/data biocontainers/vcftools:0.1.15 vcftools -help
-
-# Change name of file
-mv 6226 ../data/wolves.vcf
 
 # Do a variable in "data" because the file is in this directory
 vcftools="docker run -u 1600 --rm -v /home/cirio/bcruz/BioinfinvRepro/Unidad5/ProyectoUni5/data:/data biocontainers/vcftools:0.1.15 vcftools"
