@@ -13,8 +13,6 @@ library(ape)
 library(ggplot2)
 
 ## Download plink to my computer
-# I did not know how to download the data from the repository to the computer, so I did the exercise with the corn data that was already available
-
 
 ## Convert .bed, .fam, .bim
 ### It is converted with plink, from .ped file; to have the .ped file you must convert the .vcf file to .ped with vcftools
@@ -25,9 +23,6 @@ snpgdsBED2GDS("../data/wolves.bed",
               "../data/wolves.fam", 
               "../data/wolves.bim", 
               out.gdsfn="../data/wolves.gds") 
-
-## If the function failed for some reasons after running createfn.gds, how I use createfn.gds on the same file again.
-showfile.gds(closeall=TRUE)
 
 # See summary 
 snpgdsSummary("../data/wolves.gds")
