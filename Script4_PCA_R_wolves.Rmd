@@ -33,13 +33,13 @@ library(ggplot2)
 snpgdsBED2GDS("../data/wolves.bed", 
               "../data/wolves.fam", 
               "../data/wolves.bim", 
-              out.gdsfn="../data/wolves2.gds") # Here indicate name file
+              out.gdsfn="../data/wolves.gds") # Here indicate name file
 
 # See summary 
-snpgdsSummary("../data/wolves2.gds")
+snpgdsSummary("../data/wolves.gds")
 
 # Load gds file created from .bed, .fam and .bim files
-gdsfile <- snpgdsOpen("../data/wolves2.gds")
+gdsfile <- snpgdsOpen("../data/wolves.gds")
 
 # Check snp.ids
 head(read.gdsn(index.gdsn(gdsfile, "snp.id")))
