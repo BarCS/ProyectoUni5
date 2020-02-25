@@ -9,7 +9,7 @@ nano wolves.sh
 # Do a variable in "data" because the file is in this directory
 vcftools="docker run -u 1600 --rm -v /home/cirio/bcruz/BioinfinvRepro/Unidad5/ProyectoUni5/data:/data biocontainers/vcftools:0.1.15 vcftools"
 
-# (a) How many indiviuals and variants (SNPs) does the file have?
+# (a) How many individuals and variants (SNPs) does the file have?
 ## Because my wd is bin, the direction to dates (wolves.vcf) is ../data/
 $vcftools --vcf ../data/wolves.vcf
 
